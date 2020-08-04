@@ -73,3 +73,14 @@
     background-color: var(--color-secondary-dark);
 }
 
+.total-connections {
+    font-size: 1.8rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
