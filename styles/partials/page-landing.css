@@ -1,0 +1,23 @@
+:root {
+    font-size: 40%;
+}
+
+#page-landing {
+    background-color: var(--color-primary);
+}
+
+#page-landing {
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img {
+    height: 10rem;
+}
+
+.logo-container {
+    text-align: center; /* Atribuida para texto mas alguns elementos como o img aceitam essa propriedade também */
+}
+
+.hero-image {
+    width: 100%; /* 100% referente ao pai dele #container = 90vw até 700px*/
+}
