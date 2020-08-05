@@ -35,34 +35,6 @@
     background-color: var(--color-secondary-dark);
 }
 
-.select-block select, 
-.input-block input{
-    width: 100%;
-    height: 5.6rem;
-    margin-top: 0.8rem;
-    border-radius: 0.8rem;
-    background: var(--color-input-background);
-    border: 1px solid var(--color-line-in-white);
-    outline: 0; /* Uma marcação indocando a seleção do elemento */
-    padding: 0 1.6rem;
-    font: 1.6rem Archivo;
-}
-.input-block {
-    position: relative; /* Define que todo o posicionamento dos seus filhos será relativo a ele*/
-}
-
-.input-block:focus-within::after { /* Quando estiver em foco um elemento ::after é criado no HTML*/
-    content: ""; /* Todo elemento ::after criado precisa de um conteúdo que nesse caso está vazio*/
-    height: 2px;
-    width: calc(100% - 3.2rem);
-    background-color: var(--color-primary-light);
-    position: absolute; /* Cria uma nova camada sobre o arquivo que terá o posicionamento absoluto*/
-    /* O posicionamento por si só é em relação ao body e nao ao pai, 
-    para ser em relação ao pai, o pai deve ser relativo*/
-    left: 1.6rem; /* Define um espaçamento da lateral esquerda*/
-    bottom: 0; /* Define o posicionamento inicial no eixo Y do elemento*/
-}
-
 #page-study main {
     margin: 3.2rem auto;
     width: 90%; /* Para manter margem dentro da aplicação */
