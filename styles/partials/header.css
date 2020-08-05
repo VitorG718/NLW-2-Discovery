@@ -24,7 +24,7 @@
     opacity: 0.7;
 }
 
-.page-header .top-bar-container img {
+.page-header .top-bar-container > img {
     height: 1.6rem;
 }
 
