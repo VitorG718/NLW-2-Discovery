@@ -2,7 +2,7 @@
   "name": "nlw",
   "description": "Aplicação Web desenvolvida durante a NLW #2 da Rocketseat",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,8 @@
   "homepage": "https://github.com/VitorG718/NLW-2-Discovery#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
