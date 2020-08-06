@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/VitorG718/NLW-2-Discovery/issues"
   },
-  "homepage": "https://github.com/VitorG718/NLW-2-Discovery#readme"
+  "homepage": "https://github.com/VitorG718/NLW-2-Discovery#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
