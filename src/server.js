@@ -44,7 +44,7 @@ server.get("/", (req, res) => {
 });
 
 server.get("/study", (req, res) => {
-    return res.render("study.html");
+    return res.render("study.html", {proffys}); // está sendo enviado o objeto proffys para ser trabalhado no front-end da página
 });
 
 server.get("/give-classes", (req, res) => {
