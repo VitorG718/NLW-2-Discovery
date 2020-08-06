@@ -62,6 +62,19 @@ const express = require("express"); // objeto do express
 const server = express(); // funcionalidades do express
 const nunjucks = require("nunjucks"); // importando o nunjuncks
 
+
+function getSubject(subjectNumber) {
+    /**
+     * + -> para garantir que esse valor seja um número
+     * -1 -> pois no select começa com 1
+     */
+    const position = +subjectNumber - 1;
+    
+    return subjects[position];
+}
+
+
+
 // configurando o nunjucks (tempalte engine)
 nunjucks.configure("src/views", { /* informa onde os arquivos html estão */
     express: server, /* informa o objeto com as funcionalidades do express */
@@ -93,6 +106,9 @@ server.get("/give-classes", (req, res) => {
      */
     const isEmpty = Object.keys(data).length == 0;
     if(!isEmpty) {
+
+        data.subject = getSubject(data.subject);
+        
         proffys.push(data); // adiciona um novo elemento ao proffys
         return res.redirect("/study"); // redireciona a nossa aplicação para outra página
     }
