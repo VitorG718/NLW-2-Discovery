@@ -67,29 +67,30 @@
         <main> <!-- tag que indica o conteúdo principal da página -->
 
             <!-- Para acessar um objeto mandado pelo nunjucks chaves dentro de chaves -->
-            <h1>{{proffys}}</h1>
             <!-- O nunjucks reconhece as chaves duplas mesmo em um comentário -->
-            <article class="teacher-item"> <!-- Tag que indica um conteúdo que se repetirá várias vezes no site -->
-                <header>
-                    <img 
-                        src="https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4" 
-                        alt="Diego Fernandes">
-                    <div>
-                        <strong>Diego Fernandes</strong>
-                        <span>Química</span>
-                    </div>
-                </header>
-            
-                <p>Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
-            
-                <footer> <!-- Tag que indica o rodapé do elemento -->
-                    <p>Preço/hora<strong>R$ 20,00</strong>
-                    </p>
-                    <button type="button">
-                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article>
+            {%for proffy in proffys %}
+                <article class="teacher-item"> <!-- Tag que indica um conteúdo que se repetirá várias vezes no site -->
+                    <header>
+                        <img 
+                            src="{{proffy.avatar}}" 
+                            alt="{{proffy.name}}">
+                        <div>
+                            <strong>{{proffy.name}}</strong>
+                            <span>{{proffy.subject}}</span>
+                        </div>
+                    </header>
+                
+                    <p>{{proffy.bio}}</p>
+                
+                    <footer> <!-- Tag que indica o rodapé do elemento -->
+                        <p>Preço/hora<strong>R$ {{proffy.cost}}</strong>
+                        </p>
+                        <button type="button">
+                            <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                        </button>
+                    </footer>
+                </article>
+            {%endfor%}
 
         </main>
     </div>
