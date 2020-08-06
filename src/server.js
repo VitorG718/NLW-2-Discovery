@@ -84,7 +84,20 @@ server.get("/study", (req, res) => {
 });
 
 server.get("/give-classes", (req, res) => {
-    return res.render("give-classes.html");
+    const data = req.query;
+
+    /**
+     * Object -> se refere ao tipo Objeto
+     * keys -> tranforma o objeto em um array:
+     * ['name','avatar','whatsapp','bio','subject','cost','weekday','time_from','time_to']
+     */
+    const isEmpty = Object.keys(data).length == 0;
+    if(!isEmpty) {
+        proffys.push(data); // adiciona um novo elemento ao proffys
+        return res.redirect("/study"); // redireciona a nossa aplicação para outra página
+    }
+
+    return res.render("give-classes.html", {subjects, weekdays});
 });
 
 server.listen(5500); // indica qual porta será usada ouvir a aplicação
