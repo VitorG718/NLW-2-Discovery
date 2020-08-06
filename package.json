@@ -1,0 +1,15 @@
+{
+  "name": "nlw",
+  "description": "Aplicação Web desenvolvida durante a NLW #2 da Rocketseat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorG718/NLW-2-Discovery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VitorG718/NLW-2-Discovery/issues"
+  },
+  "homepage": "https://github.com/VitorG718/NLW-2-Discovery#readme"
+}
