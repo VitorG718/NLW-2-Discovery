@@ -100,7 +100,7 @@
     display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer .button {
     width: 20rem;
     height: 5.6rem;
     background-color: var(--color-secondary);
@@ -119,7 +119,7 @@
     margin-left: 1.6rem; /* Impede que o texto e o preço fiquem colados em dispositivos com tela pequena*/
 }
 
-.teacher-item footer button:hover {
+.teacher-item footer .button:hover {
     background-color: var(--color-secondary-dark);
 }
 
@@ -185,13 +185,13 @@
         padding: 0 32px;
     }
 
-    .teacher-item footer button{
+    .teacher-item footer .button{
         width: 245px;
         font-size: 16px;
         justify-content: center;
     }
 
-    .teacher-item footer button img{
+    .teacher-item footer .button img{
         margin-right: 16px;
     }
 }
