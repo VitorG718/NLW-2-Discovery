@@ -6,7 +6,7 @@ const proffys = [
         whatsapp: "61995953315",
         bio: "Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.",
         subject: "Química",
-        cost: "20",
+        cost: "20,00",
         weekday: [0],
         time_from: [720],
         time_to: [1220]
@@ -17,8 +17,19 @@ const proffys = [
         whatsapp: "11993174695",
         bio: "Instrutor de Educação Física para iniciantes, minha missão de vida é levar saúde e contribuir para o crescimento de quem se interessar.<br><br>Comecei a minha jornada profissional em 2001, quando meu pai me deu dois alteres de 32kg com a seguinte condição: \"Aprenda a fazer dinheiro com isso!\"",
         subject: "Educação Física",
-        cost: "40",
+        cost: "40,00",
         weekday: [5],
+        time_from: [1500],
+        time_to: [2020]
+    },
+    {
+        name: "Vitor Oliveira",
+        avatar: "https://avatars0.githubusercontent.com/u/52329675?s=460&u=f318c55affcc3d70e4daa359515cbbc43daa64e2&v=4", 
+        whatsapp: "61999994355",
+        bio: "Iniciando agora como instrutor de geografia, mas com um hype a mil!",
+        subject: "Geografia",
+        cost: "30,00",
+        weekday: [2],
         time_from: [1500],
         time_to: [2020]
     }
