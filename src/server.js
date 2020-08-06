@@ -35,11 +35,34 @@ const proffys = [
     }
 ];
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química"
+];
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado"
+];
+
 const express = require("express"); // objeto do express
 const server = express(); // funcionalidades do express
 const nunjucks = require("nunjucks"); // importando o nunjuncks
 
-// configurando o nunjucks
+// configurando o nunjucks (tempalte engine)
 nunjucks.configure("src/views", { /* informa onde os arquivos html estão */
     express: server, /* informa o objeto com as funcionalidades do express */
     noCache: true /* informa que não será usado a cache na aplicação */
@@ -55,7 +78,9 @@ server.get("/", (req, res) => {
 });
 
 server.get("/study", (req, res) => {
-    return res.render("study.html", {proffys}); // está sendo enviado o objeto proffys para ser trabalhado no front-end da página
+    const filters = req.query; // pega todos os elementos enviados para a url da página (após o ?)
+    return res.render("study.html", {proffys, filters, subjects, weekdays}); // está sendo enviado o objeto proffys para ser trabalhado no front-end da página
+    // Agora os filters enviados do front-end e os objetos do back estão sendo enviados também
 });
 
 server.get("/give-classes", (req, res) => {
