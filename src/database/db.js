@@ -1,13 +1,11 @@
 const Database = require("sqlite-async"); // importa o banco de dados
 
-Database.open(__dirname + "/database.sqlite").then(execute); // abre o banco de dados e quando feito executa a função execute
-
 function execute(db) {
     /**
      * db -> objeto do banco de dados
      * exec() -> executa os comandos SQL dentro das crases
      */
-    db.exec(`
+    return db.exec(`
         CREATE TABLE IF NOT EXISTS proffys (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT,
@@ -18,7 +16,7 @@ function execute(db) {
 
         CREATE TABLE IF NOT EXISTS classes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            subject TEXT,
+            subject INTEGER,
             cost TEXT,
             proffy_id INTEGER
         );
@@ -32,3 +30,9 @@ function execute(db) {
         );
     `);
 }
+
+/**
+ * module -> objeto
+ * exports -> atributo que indica o que será adquirido quando for feito o require() desse arquivo
+ */
+module.exports = Database.open(__dirname + "/database.sqlite").then(execute); // abre o banco de dados e quando feito executa a função execute
